@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>The Great Keksby</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      
+   <div class="page-header"><!-- шапка сайта-->
+       <div class="container"> <!--блок-центровщик -->
+       <div class="header-top clearfix"> <!-- добаявлеям  этому контейнеру(не container) псевдораспорку clearfix, поттому что он содержит флотнутые элементы(.header-logo), Если бы мы добавили распорку на центровщик, то возникли бы проблемы с заданием отступа между блоками .header-top и .promo.
+
+ -->
+           <div class="header-logo">
+               <img src="img/logo.png" alt="The Great Keksby" width="205" height="55"> <!-- картинку-логотип обычно оборачивают в блок-контейнер. -->
+           </div>
+           <ul class="main-nav clearfix"> <!--неупорядченный спсиок -->
+                   <li><a href="#"> МАГАЗИН </a></li>
+                   <li><a href="#"> КАТАЛОГ </a></li>
+                   <li><a href="#"> ОТЗЫВЫ </a></li>
+           </ul>
+           <a href="#" class="btn btn-quick-order">Заказать</a>
+       </div>
+       <div class="promo">
+           <a href="#">Аксессуары для котов <br> Коллекция FW15</a>
+       </div>
+    </div><!-- центровщик-->
+   </div><!--.page-header -->
+
+   
+      
+   <div class="features">  <!-- блок Наши особености-->
+      <div class="container"> <!--блок центровщик -->
+       <ul class="clearfix"><!-- неупорялоченный спсиок, задаем псевдораспорку родителю флотнутых элементов-->
+       <li class="feature-item feature-choice"><!-- -->
+           <h2 class="feature-title">Выбор</h2> 
+           <p>ВАш питомец оцценит широту нашего ассортемента иакксессуаров</p>
+       </li>
+       <li class="feature-item feature-quality">
+           <h2 class="feature-title">Качество</h2> 
+           <p> Наши товары не сломаютсяна втрой день. Только на третий.</p>
+       </li>
+       <li class="feature-item feature-safety">
+           <h2 class="feature-title">Безопасность</h2> 
+           <p>Все изготовлено из натулральных материалов, безопасных для котов</p>
+       </li>
+     </ul>  
+    </div>      
+   </div> <!-- .features-->
+      
+    
+   <div class="cat-reference"> <!--блок Немного теории -->
+    <div class="container"><!-- блок центровщик-->
+     <h2 class="section-title"> Немного теории</h2>
+     <a href="#" class="btn to-full-reference"> Справочник</a>
+     <dl><!-- список определений-->
+        <dt> <!-- Термин-->
+            <h3 class="reference-title">Окрас кошек и котов</h3> 
+            <i class="reference-source">источник:<a href="https://ru.wikipedia.org" target="_blank"> wikipedia</a></i> <!-- выделяет текст курсивом-->
+        </dt> 
+        <dd><!--Определение dd-->
+            <img src="img/article-1.jpg" alt="Окрас кошек и котов" width="100" height="100">
+            <p> Окрас шерсти, кожи и глаз кошки обусловлен присутствием в них пигмента меланина. Меланин находится в теле волоса в виде микроскопических гранул, которые различаются по форме, размеру и количеству, что и вызывает различия в окрасе.</p>
+        </dd>
+        <dt> <!-- Термин-->
+            <h3 class="reference-title">Кошкин дом</h3>
+            <i class="reference-source">источник: <a href="http://kotmur.spb.ru" target="_blank">kotmur.spb.ru</a></i><!-- выделяет текст курсивом-->
+        </dt>
+        <dd><!--Определение dd-->
+            <img src="img/article-2.jpg" alt="Кошкин дом" width="100" height="100">
+            <p>Нужен ли кошке Кошкин дом? Свой отдельный, обособленный от пространства городской квартиры Кошкин дом? Да, нужен! Нужен особый Кошкин дом, обустроенный по её вкусу с лесенкой, с когтеточкой, с замкнутым, своим, отдельным уголком в её, кошкином, доме</p>
+        </dd>
+     </dl> 
+    </div>  <!-- от бока центрвщика-->  
+   </div><!--.cat-reference -->
+    
+      
+      
+   <div class="reviews"> <!--блок Отзывы -->
+      <div class="container"><!--центровщик -->
+       <h2 class="section-title"> Довольные коты</h2>
+       <a href="#" class="btn to-all-reviews" title="Посмотреть все отзывы">Все отзывы</a> <!--кнопка Все отзывы -->
+       <div class="reviews-list clearfix"> <!-- это родитель флотнутых элементовпоэтому азадем псевораспорку-->
+           <blockqoute class="review-item">
+               <p>Спасибо Кексу за давно напрашивающуюся идею! Набрал себе очков на все случаи жизни: для чтения и для вечеринки с котанами B-)</p>
+               <cite class="review-author">Барсик, г. Москва</cite><!-- для выделения авторов цитат.-->
+           </blockqoute>
+           
+           <blockqoute class="review-item">   
+              <p>Я просто не могу без шопинга и теперь не нужно тащить хозяйку в магазин, заказываю все аксессуары на сайте у Кекса онлайн!</p>
+              <cite class="review-author">Мурка, г. Санкт-Петербург</cite>
+           </blockqoute>
+       </div><!-- .reviews-list-->
+     </div> <!-- цкнтровщик-->     
+   </div> <!-- .reviews-->  
+    
+      
+      
+   <div class="popular-and-price"> <!-- блок Популярные товары-->   
+    <div class="container">  <!-- центровщик-->  
+       <h2 class="section-title"> Популярные товары</h2>
+       <a href="#" class="btn to-catalog" title="Посмотреть все товары">Каталог</a>
+       <div class="popular-items clearfix"> <!-- родитлб флотнутых лементов, задам ему пведвоарспорку-->
+           <div class="catalog-item">
+               <img src="img/glasses-1.jpg" alt="очки Классика жанра" width="306" height="206">
+               <h3>Очки "Классика жанра"</h3>
+               <b class="catalog-item-price">300р</b>
+               <a href="" class="btn">Описание</a>
+               <a href="" class="btn">Купить</a>
+           </div>
+           <div class="catalog-item">
+                <img src="img/glasses-2.jpg" alt="очки Жалюзи" width="306" height="206">
+               <h3>Очки "Жалюзи"</h3>
+               <b class="catalog-item-price">400р</b>
+               <a href="" class="btn">Описание</a>
+               <a href="" class="btn">Купить</a>
+           </div>
+           <div class="catalog-item">
+               <img src="img/glasses-3.jpg" alt="очки Базилис" width="306" height="206">
+               <h3>Очки "Базилио"</h3>
+               <b class="catalog-item-price">500р</b>
+               <a href="" class="btn">Описание</a>
+               <a href="" class="btn">Купить</a>
+           </div>
+       </div><!--popular-items -->
+       
+       <h2 class="section-title">Прайс-лист на услуги</h2>
+       <table class="price-list">
+           <tr> <!-- строка заголовочная-->
+               <th class="price-number"> №</th> <!-- ячейка заголовка-->
+               <th> Название услуги</th> <!-- ячейка заголовка -->
+               <th> Кто оказывает</th> <!-- ячейка заголовка-->
+               <th> Сколько стоит</th> <!-- ячейка заголовка-->
+           </tr>
+           <tr><!-- строка -->
+               <td class="price-number">1 </td>
+               <td class="price-name">Стрижка</td>
+               <td class="price-master">Грумер </td>
+               <td class="price-cost">500 руб. </td>
+           <tr>
+           <tr><!-- строка -->
+               <td class="price-number">2 </td>
+               <td class="price-name">Заточка когдтей </td>
+               <td class="price-master">Грумер </td>
+               <td class="price-cost">300 руб. </td>
+           <tr>  
+           <tr><!-- строка -->
+               <td class="price-number">3 </td>
+               <td class="price-name"> Нарктука усов</td>
+               <td class="price-master"> Грумер</td>
+               <td class="price-cost"> 100 руб. </td>
+           <tr>
+           <tr><!-- строка -->
+               <td class="price-number">4</td>
+               <td class="price-name"> Подбор аксессуаров </td>
+               <td class="price-master"> Стилист</td>
+               <td class="price-cost"> 1500 руб.</td>
+           <tr>
+       </table>       
+    </div> <!-- центровщик-->  
+   </div> <!-- .popular-and-price-->
+
+      
+      
+   <div class="feedback"> <!--форма обратной свзяи --> 
+     <div class="container"><!-- центровщик-->
+       <h2 class="section-title">Остались вопросы?</h2>
+       <p class="feedback-tip">Свяжитесь с нами, и мы развеем оставшиеся у вас сомнения! </p>
+       
+       <form class="feedback-form" action="/keksby-mail" method="post"> <!-- адрес сервера /keksby-mail-->
+          <div class="feedback-form-group"> 
+              <label for="fullname"> Представьтесь, пожалуйста:</label><!-- for=«fullname» значение у for должно совпадать  c  id у label
+ -->         <input type="text" id="fullname" name="fullname">
+          </div>
+          <div class="clearfix"><!-- родитель для флотнутых элементов-->
+              <div class="feedback-form-group feedback-form-group-left-part">
+                  <label for="phone">Контактный телефон:</label>
+                  <input type="text" id="phone" name="phone">
+              </div>
+           
+              <div class="feedback-form-group feedback-form-group-right-part">
+                  <label for="Email">Почта:</label>
+                  <input type="text" id="Email" name="Email">
+              </div>
+           </div>       
+          <div class="checkbox-area">
+              <label><input type="checkbox" name="subscription"> Я согласен получать спам и смс на телеофн</label> <!-- --На макете чекбокс и подпись к нему расположены на одной строке, поэтому можно обернуть поле и текст подписи в один тег label-->
+          </div>
+           <div class="feedback-form-group"> 
+              <label for="topic"> Тема обращения:</label><!-- for=«fullname» значение у for должно совпадать  c  id у label
+-->           <select  id="topic" name="topic"><!--выпадающий список тем-->
+                <option value="0"> Условия доставки </option><!--текст варианта-->
+                <option value="1">Возврат товара </option>
+                <option value="2"> Жалоба в Роспотребнадзор </option>
+              </select>
+          </div>
+          <div class="feedback-form-group">
+              <label for="message">Текст обращения:</label>
+              <textarea id="message" name="message">ВВедите текс вашего обращения </textarea>
+          </div>
+          <input type="submit" class="btn" value="Отправить"> <!--кнопка Отправить -->
+       </form>
+     </div><!--центровищик -->     
+   </div><!-- feedback-->
+      
+      
+   
+   <div class="page-footer">  <!-- Подвал сайта-->  
+    <div class="container">  <!-- центровщик--> 
+       <div class="footer-top clearfix"> <!-- верхняя часть подвала, родителю флотнутогологотипа .footer-logo задаем псеворраспорку-->
+         <div class="footer-logo">
+           <img src="img/logo.png" alt="The Great Keksby" width="205" height="55"> <!-- картинку-логотип обычно оборачивают в блок-контейнер. -->
+         </div>  
+           <a href="" class="btn btn-quick-order">Заказать</a>   
+       </div><!-- footer-top-->
+       
+       <div class="footer-middle clearfix"> <!-- средняя часть подвала, это родитель флотнутых элеметов задаесм псевораспорку-->
+           <div class="footer-menu">
+             <h3>Магазин</h3>
+             <ul>   
+                <li><a href="">Домики</a></li>
+                <li><a href="">Одежда</a></li>
+                <li><a href="">Очки</a></li>
+             </ul>    
+           </div>
+           <div class="footer-menu">
+             <h3>Отзывы</h3>
+             <ul>   
+                 <li><a href="">Показать</a></li>
+                 <li><a href="">Оставить</a></li>
+             </ul>
+           </div>
+           <div class="footer-menu">
+               <h3>Прайс-лист</h3>
+               <ul>
+                   <li><a href="">Скачать прайс</a></li>
+               </ul>
+           </div>
+       </div><!-- средняя часть подвала-->
+       
+       <div class="footer-bottom clearfix"> <!-- нижняя часть подвала, это родитель флотнутых элементов(.footer-social и  .footer-copyright),  поэтому задаем ему псевдораспорку-->
+           <div class="footer-social">
+               <b>Давайте дружить!</b>
+               <a class="social-btn social-btn-vk" href="https://vk.com/htmlacademy"> Вконтакте</a>
+               <a class="social-btn social-btn-fb" href="https://facebook.com/htmlacademy">Фейсбук </a>
+               <a class="social-btn social-btn-in" href="https://instagram.com/htmlacademy">Инстаграмм </a>
+           </div>
+           <div class="footer-copyright">
+               С <span class="heart">любовью</span> для <a href="https://htmlacademy.ru">HTML Academy</a> <!-- потмо слово "любовью" заменим иконкиой сердца, спаны для выделения небольших фраз или отдельных слов.-->
+           </div>   
+       </div><!--footer-bottom -->
+     </div>  <!-- центровщик-->  
+   </div><!-- page-footer-->
+      
+  </body>
+</html>

@@ -1,0 +1,820 @@
+body{/*Обычно браузеры добавляют небольшой отступ для всей страницы, чтобы контент не прилипал к краям. Этот отступ нам не нужен, так как в макете отступы будут в других контейнерах. Поэтому обнулим внешние и внутренние отступы у body.*/
+   padding: 0;
+   margin: 0;    
+   background-color: white; /*фоновый цвет*/   
+   font-size: 16px;  
+   line-height: 24px;/*межстроынй интервал*/ 
+   font-family: "Arial", sans-serif;
+   color: #404040; /*цвет еткста*/
+   min-width: 1040px;    
+}
+
+
+/*ОБЩИЕ СТИЛИ*/
+/*контенйер-центровщик, Чтобы расположить содержание по центру, */
+.container{
+    width: 1020px;
+    margin:0 auto; /*содержимое будет в центре, центрируте содержимое*/
+}
+
+
+
+
+
+
+
+/*стили для кнопок*/
+.btn{
+    display: inline-block; /*это лучше всего подходит для кнопок(чтобы их общая ширина формировалась за счёт текста и внутренних отступов. ), так как позволяет задавать внутренние отступы со всех сторон, ужимает элементы по ширине под содержание,теперь  лучше сразу явно пропишите ему вертикальное выравнивание, затем можно добавить кнопкам внутренние отступы и рамки*/
+    vertical-align: top; /*вертикальное выравнивание текста в кнопке*/
+    text-align: center; /*располодение текста в кнопке будет по центру*/
+    border: 2px solid #a38b70;
+    padding: 10px;
+    width: 146px;
+    word-wrap: break-word;
+    border-radius: 2px;
+    font: inherit; /*свойства шрифтов,У кнопок форм есть проблемы с наследованием свойств шрифта от родителей, поэтому мы должны включить принудительное наследование.*/
+    color: #a38b70;
+    text-decoration: none; /*убираем подчеркивания, котрый ставит браузер по умолчанию*/
+    text-transform: uppercase;/*буквы делаем пропистыными*/
+}
+
+.btn:hover{ /*при наведении на кнпоки */
+    color: #8d745a;
+}
+
+
+
+.btn:active{ /*при нажатии на кнопку*/
+    color: rgba(141, 116, 90, 0.3);
+}
+
+
+
+
+.section-title{ /*для заголовков h2*/
+    font-family: "Georgia", serif;
+    font-size: 45px;
+    line-height: 55px; /*межтровнйм интервал*/
+    font-weight: bold;
+    color: #a38b70;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 60px;
+    margin-right: 180px;/*чтобы текст заголовка (если он вдруг изменится) не заполз под кнопку, мы добавляем заголовку отступ справа.*/
+}
+
+
+
+
+
+
+/*Ш  А   П   К   А*/
+.page-header,
+.page-footer { /*шапка и подвал*/
+  
+  background-color: #eeeeee; /*цвет фона*/
+}
+
+.page-header{
+    background-color: #363636;
+    color: #c3c3c3;
+    background-size: cover;/*изображению задаются минимально возможные размеры, при которых оно закроет всю фоновую область блока.*/
+    background: url("img/header-bg.jpg") no-repeat 50% 50%;/*фонове ИЗОБРАЖЕНИЕ по центру. с background-image не отображает*/
+    padding-top: 35px;
+    min-height: 490px; /* надо задавать иначе высота ранва содержимому*/
+    
+}
+
+
+.header-logo{ /*смеащем лого . влево и флотнутым элментам всегда задаем размеры*/
+    float: left;/*лого к левом краю родителя(.container)*/
+    width: 205px; /*такая же ка и . у картникии самой*/
+    height: 55px; /*такая же как и картинки самой*/
+}
+
+
+.header-top{
+    margin-bottom: 125px;
+}
+
+
+
+
+
+
+
+
+/*М   Е   Н  Ю      В      Ш  А  П  К  Е*/
+.main-nav{ /*меню в шапке*/
+    list-style: none;/*убираем марекеры у списокв, кортые ствит браузер по умолчанию*/
+    float: left; /*флотнули к левому краю родителя, затем задаем размеры обязательно иначе сетка ломаться будет привувеличении содрдимого*/
+    width: 480px;
+    margin: 0;
+    padding:0;
+    margin-left: 125px;
+    
+}
+
+.main-nav li{ /*элементам спсика*/
+    text-transform:uppercase;/*буквы делаем пропистыными*/
+    float:left; /*тогда пункт меню вытсроятся в ряд*/
+    margin-right: 50px; /*чтоы пункты меню не слипались*/
+
+   
+}
+
+
+.main-nav li:last-child { /*у . псоледнего пунтка маргин убираем*/
+  margin-right: 0px;
+}
+
+
+.main-nav  li  a{
+    color: white;
+    text-decoration: none;/*убираем подчеркивания у ссылок, котыре ствит браузер по умолчнаию*/
+}
+
+.main-nav  li  a:hover{
+    text-decoration: underline; /*рпи наведении на ссылку она подчеркивается*/
+}
+
+
+.main-nav  li  a:active{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+.btn-quick-order{ /*для  кнопки Заказать*/
+    float: right; /*флотнули к правому краю родилетя*/
+    
+}
+
+
+.promo {
+    text-align: center; /*тектс выровавняется по центру*/
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;/*межстрочный интервал*/
+    font-family: "Georgia", serif;
+   
+}
+
+
+.promo a{
+     color: white;
+}
+
+
+
+/*блок Н А Ш И    О С О Б Е Н Н О С Т И */
+.features{
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    
+}
+
+.feature-item{
+    text-align: center;/*выравниевани текста по центру*/
+    border-left: 1px solid #d9d9d9;
+    padding-top: 90px;
+    float: left; /*флотнули*/
+    width: 279px; /*ширину задаем явно, иначе 3-я колнка не поместится из-за  ширине ранвого содержимому*/
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+
+.feature-item:first-child{ /*у первого убираем рамку*/
+    border-left: none;
+}
+
+
+.feature-item  .feature-title{
+    font-family: "Georgia", serif;
+    font-size: 30px;
+    line-height: 30px;/*межстрочный интервал-расстояние от сожеримого о границы контенйера*/
+    font-weight: bold;
+    color: #a38b70;
+    margin: 0;
+    margin-bottom: 10px;
+}
+  
+
+
+
+.feature-item p{
+    margin: 0;
+}
+
+
+
+
+
+.features ul{
+    list-style: none; /*убираем маркеры у пунтком спсика*/
+    margin: 0; /*у спсика по молчанию есть сови отступы их убираем*/
+    /*margin-top:30px;/*проверить надо так ли у них?*/
+    padding: 0;
+}
+
+
+
+.feature-choice{
+    background: url("img/feature-1.png") no-repeat top center;/*фонове изобрадение*/
+}
+
+
+.feature-quality{
+    background: url("img/feature-2.png") no-repeat top center;/*фонове изобрадение*/
+}
+
+.feature-safety{
+    background: url("img/feature-3.png") no-repeat top center;/*фонове изобрадение*/
+}
+
+
+
+
+/*Блок Н Е М Н О Г О     Т Е О Р И И*/
+
+.cat-reference{
+    background-color: #f2f2f2;
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+
+.cat-reference h2{
+    margin:0; /*у загловокв по умолчанию есть внешние утсупы, их убираем*/
+   margin-bottom: 60px;
+}
+
+.reference-title{
+    font-size: 24px;
+    display: inline; /* сделали строчным после этого заголовик и ссылки(кнопка) будуту на одной строке*/
+}
+
+
+.cat-reference .container{
+    position: relative; /*родителю кнопк Спрачовник задаем отнсоительное позиционирвоание*/
+}
+
+
+.to-full-reference{/*стиль для кнопки Справочкик*/
+    position: absolute; /*сдвигаем кнопку относителньо границ родителя  .container*/
+    top: 5px; /* расстоняие от верхней границы родителя до верхней границы кнопки*/
+    right: 0px; /*расстоняие от правой границы родителя до правой границы кнопки*/
+}
+
+.reference-source{
+    font-style: italic;/*курсивный шрифт*/
+    color: #666666;
+    position: relative; /*родитлю ссылки задаем относительное позиционирование*/
+    /*border: 1px solid red;  */  
+}
+
+
+.reference-source a::after{/*псевдоэлемент^ к маленькому квадратику в ссылке*/
+    content:"";
+    position: absolute;
+    width:8px;
+    height:8px;
+    /*background-color: red;*/
+    top: 0;
+    right: -10px;
+    background: url("img/sprite.png")  no-repeat -5px -210px; /*вставляем спрайт с позицией изобраения  -5px -210px*/
+}
+
+
+.cat-reference dl{
+    width: 820px;
+    margin: 0;
+    padding: 0;
+}
+
+.cat-reference dt{ /*термин спсика*/
+    margin: 0; /*убираем внешние осттупы*/
+    margin-bottom: 10px;
+}
+
+
+
+.cat-reference dd{/*определение спсика*/
+    margin: 0; /*браузер ствит отступы по умолчанию, ион нам н нуны*/
+    position: relative; /* это родитель для изобрадкниея в статье, поэтому ему относителньо позиционирвоанеи */
+    min-height: 100px;   
+    padding-left: 130px;
+}
+
+.cat-reference dd + dt{ /*стил для dd, котрый сразу идет за dt*/
+    margin-top: 70px;
+}
+
+dd p{
+    
+    margin:0;
+}
+
+.cat-reference img{
+    border-radius: 5px; /*скругляем углы*/
+    position: absolute; /*изоюражению абсолютеное поизционирование*/
+    top: 0px;
+    left: 0px;
+    width: 100px;/*размеры кратинок явноу казываем*/
+    height: 100px;
+}
+
+
+.reference-source a{
+    color: #a38b70;
+}
+
+
+.reference-source a:hover{
+    color: #8d745a;
+}
+
+.reference-source a:active{
+    color: rgba(141, 116, 90, 0.3);
+}
+
+
+
+
+
+
+/*Блок О Т З Ы В Ы*/
+.reviews{
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+
+.review-item{
+    border-left: 3px solid #a38b70;
+    float: left; /*флотнули элемент*/
+    width: 377px; /*ширина отзыва, надо обязтельно задавать флотнутому элементу, иначе ширина будет ранва ее содержимому и они не смогут выстроиться в ряд*/
+    padding: 0;
+    padding-left: 50px; 
+    margin-right: 80px;
+}
+
+.review-item p{ /**/
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.review-author{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.reviews .container{
+    position: relative; /*это родитель для кнпоки Всеотзывы*/
+    /*border:1px solid black;*/
+}
+
+
+.to-all-reviews{ /*кнпока Все отзывы*/
+    position: absolute; 
+    top:0; /*смещаем кнопку в правй  верхний угол родителя*/
+    right:0;
+    
+}
+
+
+/*блок П О П У Л Я Р Н Ы Е    Т О В А Р Ы*/
+.popular-and-price{
+    background-color: #f2f2f2;
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+
+
+.popular-and-price .container{/*родитель дл кнопик Каталог*/
+    position: relative;/*родителдзаадем относителньое позиционирование*/
+    /*border:1px solid black;*/
+}
+
+.to-catalog{ /*для кнпоки Каталог*/
+    
+    position: absolute;
+    top: 0; /*расстояние отверхнего края родителя до верхнего края кнпоки*/
+    right:0;/*расстояние от правого края родителя до правго края кнпоки*/
+}
+
+
+
+
+
+
+.catalog-item h3{/*к зпголовкам из Популярные товары*/
+    font-size: 16px;
+    color: #000000; 
+    float: left;
+    max-width: 205px;/*надо обяззательно задавать*/
+    margin: 0;/*по умолчанию у загловков еть отсупы, поэтому из обнуляем ичаече нпок убдут съезжать*/
+    margin-bottom: 20px;
+    
+}
+
+.popular-items{
+    margin-bottom: 50px;
+}
+
+.catalog-item{
+    float: left;
+    width: 262px;/*ширину обязательно надо задвать иначе элементы не выстроятся в рядили модно задать box-sizing: border-box( в этомслучае ширина ранва содержимому);*/
+    
+    margin-right: 48px; /*отступы между itemami*/
+    border: 1px solid #d8d8d8;
+    padding-left: 22px;
+    padding-right:22px;
+    padding-top: 221px;
+    padding-bottom: 15px;
+    position: relative;/*родитель для кратинки, поэтому задаем относителньое позиционироание*/
+}
+
+.catalog-item:nth-child(3){ /*чтобы третий элммент уместился в строку, нужно убрать у него маргин, иначе он не умещается в ряд*/
+    margin-right: 0;
+}
+
+
+.catalog-item img{ 
+    /*max-width: 100%;  /*на случай вставки слишком больших картинок делаем так, задаем максимальню ширину*/
+    max-height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 306px;/*размеры самой кратинки надо здавать*/
+    height: 206px;
+}
+
+ .catalog-item .catalog-item-price{/*цена*/
+    float: right; 
+    max-width: 55px; /*задаем така как цена модет быть длинной*/ /*Когда строите колонки на флоатах, помните про переполнение. Для этого достаточно задавать ширину колонок. Если текст в колонке будет слишком длинным, он перенесётся на следующую строку, и это нормальное поведение. Но если вы забудете задать ширину, то колонка сместит вторую колонку вниз.*/
+    margin-bottom : 20px;
+    
+}
+
+.catalog-item .btn{
+    width: 101px; /*зададим кнопкам подходящую ширину, чтобы они выстроились друг за другом*/
+    
+    color: white;
+    background-color: #a38b70;
+    
+}
+
+
+/*ТАБЛИЦА*/
+.price-list{/*стиль для таблицы*/
+    width: 100%;/*тгда ширина таблицы будет ранва ширине окнабраузера  и ширина ячеек рассчитывается автоматически в зависимости от их содержания.*/ 
+    border-collapse: collapse;/*схлопываем рамки у ячеек, чтоыб они не бвли двойными*/
+    line-height: 30px;
+}
+
+
+.price-list td{/*ячейкам стиль*/
+    border: 1px solid #d8d8d8;
+    padding: 17px 10px;
+}
+ 
+.price-list th{ /*зпголовочные ячейки*/
+    text-align: left; /*выранвиевание содеримого ячеек по лево строне*/
+    font-weight:normal;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-transform: uppercase; /*делает буквы пропистыными(заглавными)*/
+}
+
+.price-list .price-number{ /*ячеки 1-го стоблца*/
+    text-align: center; /*выранвиевание содеримого ячеек по центру, переопределяем это свойство*/
+    width: 15px; 
+}
+
+
+.price-list .price-name{ /*ячейкаммстоблца названеи услуги*/
+    font-weight: bold;
+    color:#000000;
+    width: 422px''
+}
+
+
+.price-list .price-master{
+    width: 306px;
+}
+
+
+.price-list .price-cost{
+    width: 135px;
+}
+
+
+
+
+/*ФОРМА ОБРАТНОЙ СВЯЗИ*/
+.feedback{
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+
+
+
+
+.feedback-form{ /*кратинка справа от формы*/
+    background: url("img/write.jpg") no-repeat 100% 40px; /*top right*/
+    padding-right: 390px;
+    width: 630px;/*надо обзяательно задать*/
+}
+
+
+.feedback-form-group{ /*к форме*/
+    margin-bottom: 15px;
+}
+
+
+.feedback-form-group label{
+    display: block; /*   почему то там написано inline-block*/
+    padding-left:17px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 0;
+    text-transform: uppercase; /*делает буквы пропистыными(заглавными)*/
+    font-size: 12px;
+
+        
+}
+
+
+
+.feedback .container{ /*родитель для абзаца*/
+    position: relative; 
+    /*border: 1px solid black;*/
+}
+
+.feedback p{
+    position: absolute;
+    width: 500px;
+    top:0;/*сбвигаем абзац относительно родителя в правый верхний угол*/
+    right: 0;
+}
+
+
+
+.feedback .section-title{
+    width: 500px;
+}
+
+
+.feedback-form input[type="text"]{
+    width: 100%; /*тогда поля убдут занимтаь всю ширину формы*/
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    height: 54px;  
+    box-sizing: border-box; /*рамзеры поля будут равны размерам содержимого*/
+}
+
+.feedback-form-group-left-part{ /*для  поля телеофна*/
+    float: left;
+    width: 290px;
+}
+
+.feedback-form-group-right-part{ /*ля поля Потчы*/
+    float: right;
+    width: 290px;
+}
+
+.feedback-form input[type="text"], 
+.feedback-form select, 
+.feedback-form textarea{ /*По умолчанию интерактивные элементы формы не наследуют текстовые свойства: цвет, параметры шрифта. Дело в том, что в браузере этим элементам задаётся специальное предустановленное оформление.*/
+    font: inherit; /*это свойтсов унаследуется от родителя*/
+    color: inherit;/*это свойтсов унаследуется от родителя*/
+    border: 2px solid #d5d5d5;
+} 
+
+
+.feedback-form input, select, textarea:hover{/*при наведении наполя*/
+    border: 2px solid #bebebe;
+}
+
+.feedback-form input, select, textarea:focus{/*при фокусе на поля*/
+    border: 2px solid #8d745a;
+}
+
+
+.checkbox-area{
+    border-bottom: 1px solid  #d5d5d5;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.checkbox-area input {
+    margin:0;
+    margin-right: 5px;
+    
+}
+
+.feedback-form textarea{
+    min-height: 120px;
+    display: block;
+    width: 630px;
+}
+
+.feedback-form select {
+     width: 630px;
+    height:56px;
+}
+
+
+
+.feedback-form .btn{
+    margin-top: 40px;
+    background-color: #a38b70;
+    color: white;
+}
+
+
+
+.feedback-form .btn:hover{
+    
+    background-color: #8d745a;
+}
+
+
+
+
+.feedback-form .btn:active{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/*П О Д В А Л*/
+.page-footer {
+  margin-top: 20px;
+  background-color: #363636; /*фоновый цвет*/
+  color:#c3c3c3;
+  padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+.footer-top{
+    margin-bottom: 45px;
+}
+
+
+.footer-logo{ /*аналогично как и в с лого в  шапке флотим его*/
+    float: left;/*прижали логотип к левому краю роителя*/
+    width: 205px;/*рамзеры логотипа надо явно задвать оябзательно, это размеры самой картники!*/
+    height: 55px;
+    
+}
+
+
+.footer-middle{
+    border-top: 1px solid  #5e5e5e;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-bottom{
+    border-top: 1px solid  #5e5e5e;
+    padding-top: 50px;
+}
+
+
+.footer-menu{
+    float: left; /*флотнулик левому краю родитлея*/
+    margin-right:20px;
+    width: 150px;
+    
+}
+
+.footer-menu h3{
+    font-family: "Georgia", serif;
+    font-size: 24px;
+    color: #a38b70;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom:25px;
+}
+
+.footer-menu ul{
+      list-style: none;/*убираем маркетрыу элеметов меню, котрый ставит браузер по умолчанию*/
+      padding: 0;
+      margin: 0;
+}
+
+.footer-menu ul a{
+    text-decoration: none; /*убмаем подверкиване у ссылок в пунктах меню*/
+    color: #c3c3c3;
+}
+
+.footer-menu li{
+    margin-bottom:15px;
+}
+
+.footer-menu a:hover{ /*при наведении на ссылки в подвале*/
+  color: #ffffff;
+}
+
+
+
+.footer-menu a:active{ /*при нажатии на ссылки в подвале*/
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+.footer-social {
+    float: left; /*флотнли к левому краю родителя, для флотнутых элементо надо здвать размеры и отступы*/
+    width: 570px;
+    font-size: 0px; /*чтобы скрыть текст соц сетей,(задаем этос войов родителю) это задаем род блоку,Это было нужно в том числе и для борьбы с отступами между блочно-строчными элементами*/
+}
+
+
+
+
+
+.footer-social  b{/*Надписи Давай дружить в нижней части подвала */
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  color: #a38b70;
+    padding-right:50px;
+  margin-right:40px;
+}
+
+
+
+/*Нам нужно задать размеры и отступы кнопок соц сетей, а ещё выстроить их в ряд. Самое лучшее решение для этого — блочно-строчные элементы.*/
+
+.footer-social .social-btn{
+     color: #ffffff;
+     /*При использовании блочно-строчных лучше всегда явно задавать вертикальное выравнивание.*/
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block; /*чтобы кнопки выстроились в ряд*/
+    vertical-align: middle;
+    width: 60px;/*залаем размеры кнопкам соц сетей, это контейнер ля спрайтов*/
+    height: 60px;
+    margin-right: 10px;/*чтобы кнпоки соц сетей не слипались*/
+    background: url("img/sprite.png") no-repeat;
+}
+
+.footer-social .social-btn-vk{
+    background-position: 16px -238px;/*позиция фонового изображения*/
+}
+
+.footer-social .social-btn-fb{
+    background-position: 19px -297px;
+}
+
+.footer-social .social-btn-in{
+    background-position: 13px -358px;/*позиция фонового изображения*/
+}
+
+
+
+.footer-copyright {
+    float: right; /*флотнули к правому краю родителя*/
+    width: 236px; /*для флотнутых элементо надо здвать размеры и отступы*/
+    color:#ffffff;
+    text-transform: uppercase; /*делает буквы прписными*/
+    margin-top: 17px;
+    margin-right:-30px;
+}
+
+
+.footer-copyright .heart{
+     display: inline-block; /*чтобы текст и иконка были на одной стройке*/
+     background: url("img/sprite.png") no-repeat -5px -419px;
+     width:27px;/*это ширина контерйнера для спрайта*/
+     vertical-align: middle;
+     font-size: 0px;/*чты скрыть текст иконки сердца*/
+    
+    
+}
+
+    
+.footer-copyright a{
+    color:#ffffff;
+    text-decoration: none; /*убмаем подверкиване у ссылки*/
+}
+
+footer-copyright a:hover{ /*при наведении на ссылку в  нижней счасти подвала*/
+  text-decoration: underline; /*пр навдении на ссылку будет нижняя черта*/
+}
+
+
+.footer-copyright a:active{ /*при ннажатии на ссылку в  нижней счасти подвала*/
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+.clearfix::after{ /*пседорасопрка для родилтеля флотнутых элменов*/
+  content: "";
+  display: table;
+  clear: both;    
+}
